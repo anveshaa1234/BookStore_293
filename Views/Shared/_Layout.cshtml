@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookStore</title>
+
+    <!-- Common CSS theme -->
+    <link rel="stylesheet" href="~/css/theme.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a class="brand" href="/">BookStore</a>
+        <div class="nav-links">
+            <a href="/Books">Books</a>
+            <a href="/Account/Login">Login</a>
+            <a href="/Account/Register">Register</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; @DateTime.Now.Year - BookStore. All Rights Reserved.
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿@model BookStore_293.Models.Store
+
+<!-- Hero Section -->
+<div style="
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    background-color:#4E342E; /* updated brown */
+    color:#FAF3E0; /* beige text */
+    padding:60px 20px;
+    font-family:'Georgia', serif;
+    gap:30px;
+">
+
+    <!-- Text Info -->
+    <div style="flex:1; min-width:250px; text-align:center;">
+        <h1 style="font-size:48px; margin-bottom:15px;">Welcome to @Model.Name</h1>
+        <p style="font-size:20px; margin-bottom:20px;">Your cozy corner for the best books in town</p>
+        <p style="font-size:16px; margin:8px 0;"><strong>Location:</strong> @Model.Location</p>
+        <p style="font-size:16px; margin:8px 0;"><strong>Phone:</strong> @Model.Phone</p>
+        <p style="font-size:16px; margin:8px 0;"><strong>Hours:</strong> @Model.Hours</p>
+    </div>
+
+    <!-- Store Image -->
+    <div style="flex:1; min-width:250px; text-align:center;">
+        <img src="~/images/bookstore.jpg" alt="@Model.Name" style="
+            max-width:100%;
+            height:auto;
+            border-radius:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
+        " />
+    </div>
+
+</div>
+
+<!-- Quick Info Card -->
+<div style="
+    max-width:900px;
+    background:#4E342E; /* updated brown */
+    margin:40px auto;
+    padding:25px 20px;
+    border-radius:15px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.1);
+    font-family:'Georgia', serif;
+    color:#FAF3E0;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:15px;
+">
+    <div style="flex:1; min-width:150px;">
+        <p><strong>Email:</strong> @Model.Email</p>
+    </div>
+    <div style="flex:1; min-width:150px;">
+        <p><strong>Established:</strong> @Model.Established</p>
+    </div>
+    <div style="flex:1; min-width:150px;">
+        <p><strong>Specialty:</strong> @Model.Preference</p>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color:#FAF3E0;
+        margin:0;
+        padding:0;
+    }
+
+    div img {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    div img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+
+</style>
